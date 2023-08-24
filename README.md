@@ -46,11 +46,11 @@ This project demonstrates how to create a Django REST API using Docker for datab
     virtualenv venv
 
 3. **Activate the Virtual Environment:**
-    - On Windows:
+   * On Windows:
         ```bash
         .\venv\Scripts\activate
     
-    - On macOS and Linux:
+   * On macOS and Linux:
         ```
         source venv/bin/activate
       
@@ -60,25 +60,30 @@ This project demonstrates how to create a Django REST API using Docker for datab
 
 5. **Docker Compose Setup:**
     ```bash
-    # Build and start Docker containers
-    docker-compose up -d
-
-    # Apply database migrations
-    docker-compose exec web python manage.py migrate
-
-6. **Fetch Data from SWAPI GraphQL:**
-    To populate your PostgreSQL database with data from the SWAPI GraphQL API, run the following Django management command:
-    ```bash
-    python manage.py populate_planets
+    # Build and start PostgreSQL Database container
+    docker-compose up -d db
 
 ## Running the Project
 
 1. **Once everything is set up, you can run your Django project:**
 
     ```bash
+    # Build Django App container
+    docker-compose build
+   
+    # Start Django App container
     docker-compose up
 
-The Django development server will start, and your API will be accessible at **http://localhost:8000/.**
+The Django development server will start, and your API will be accessible at **http://localhost:8000/.**.
+
+## Usage
+
+* Access Get all Planets and Create Planet endpoints: http://0.0.0.0:8000/api/planets/.
+* Access Get a Planet by id, Update a Planet and Delete a planet endpoints: http://0.0.0.0:8000/api/planets/<int:pk>.
+
+> [!NOTE]
+> You can use this endpoints in the web browser for an interactive UI to gather the information.
+> I created a [Postman Collection](django-crud.postman_collection.json) if you want a more traditional approach.
 
 ## Contributing
 Feel free to contribute to this project by opening issues or pull requests.
