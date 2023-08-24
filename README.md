@@ -4,11 +4,11 @@ The goal of this exercise is to retrieve data from an external source, store it 
 ## Goals: 
 ## 1. Read the data from this endpoint: 
 
-swapi-graphql.netlify.app/.netlify/functions/index?query=query Query %7BallPlanets%7Bplanets%7Bname population terrains climates%7D%7D%7D
+[swapi-graphql.netlify.app/.netlify/functions/index?query=query Query %7BallPlanets%7Bplanets%7Bname population terrains climates%7D%7D%7D](https://swapi-graphql.netlify.app/.netlify/functions/index?query=query%20Query%20%7BallPlanets%7Bplanets%7Bname%20population%20terrains%20climates%7D%7D%7D)
 
 Additionally, you can view the shape of the data here: 
 
-Explorer | Star Wars@current | Studio (apollographql.com)
+[Explorer | Star Wars@current | Studio (apollographql.com)](https://studio.apollographql.com/public/star-wars-swapi/variant/current/explorer)
 
 with the following query: 
 
