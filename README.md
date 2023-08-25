@@ -32,13 +32,13 @@ This project demonstrates how to create a Django REST API using Docker for datab
 
 1. **Clone the Repository:**
 
-   ```bash
+   ````bash
    git clone git@github.com:Rafael13es/django-code-challenge-fwscience.git
    cd django-code-challenge-fwscience
    
 2. **Create a Virtual Environment:**
 
-    ```bash
+    ````bash
     # Install virtualenv if not already installed
     pip install virtualenv
 
@@ -47,34 +47,38 @@ This project demonstrates how to create a Django REST API using Docker for datab
 
 3. **Activate the Virtual Environment:**
    * On Windows:
-        ```bash
+        ````bash
         .\venv\Scripts\activate
     
    * On macOS and Linux:
-        ```
+        ````bash
         source venv/bin/activate
       
 4. **Install Dependencies:**
-    ```bash
+    ````bash
     pip install -r requirements.txt
 
 5. **Docker Compose Setup:**
-    ```bash
+    ````bash
     # Build and start PostgreSQL Database container
     docker-compose up -d db
+
+6. **Run Tests:**
+   ````bash
+   python manage.py test planets.tests.PlanetViewTests  
 
 ## Running the Project
 
 1. **Once everything is set up, you can run your Django project:**
 
-    ```bash
+    ````bash
     # Build Django App container
     docker-compose build
    
     # Start Django App container
     docker-compose up
 
-The Django development server will start, and your API will be accessible at **http://localhost:8000/.**.
+The Django development server will start, and your API will be accessible at **http://localhost:8000/.**
 
 ## Usage
 
